@@ -53,11 +53,23 @@ public class ScadaReport {
 	@Column(name="Nominal_Power")
 	private Double nominalPower;
 	
-	@Column(name="Operating_Voltage")
-	private Double operatingVoltage;
+	@Column(name="Operating_Voltage1")
+	private Double operatingVoltage1;
 	
-	@Column(name="Operating_Current")
-	private Double operatingCurrent;
+	@Column(name="Operating_Voltage2")
+	private Double operatingVoltage2;
+	
+	@Column(name="Operating_Voltage3")
+	private Double operatingVoltage3;
+	
+	@Column(name="Operating_Current1")
+	private Double operatingCurrent1;
+	
+	@Column(name="Operating_Current2")
+	private Double operatingCurrent2;
+	
+	@Column(name="Operating_Current3")
+	private Double operatingCurrent3;
 	
 	@Column(name="Power_Factor")
 	private Double powerFactor;
@@ -76,135 +88,12 @@ public class ScadaReport {
 
 	@Column(name="power_timevar")
 	private Double powerTimevar;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public Timestamp getDated() {
-		return dated;
-	}
-
-	public void setDated(Timestamp dated) {
-		this.dated = dated;
-	}
-
-	public String getHeatNo() {
-		return heatNo;
-	}
-
-	public void setHeatNo(String heatNo) {
-		this.heatNo = heatNo;
-	}
-
-	public String getGrade() {
-		return grade;
-	}
-
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
-
-	public String getMelterName() {
-		return melterName;
-	}
-
-	public void setMelterName(String melterName) {
-		this.melterName = melterName;
-	}
-
-	public int getTap() {
-		return tap;
-	}
-
-	public void setTap(int tap) {
-		this.tap = tap;
-	}
-
-	public int getCurve() {
-		return curve;
-	}
-
-	public void setCurve(int curve) {
-		this.curve = curve;
-	}
-
-	public Double getNominalPower() {
-		return nominalPower;
-	}
-
-	public void setNominalPower(Double nominalPower) {
-		this.nominalPower = nominalPower;
-	}
-
-	public Double getOperatingVoltage() {
-		return operatingVoltage;
-	}
-
-	public void setOperatingVoltage(Double operatingVoltage) {
-		this.operatingVoltage = operatingVoltage;
-	}
-
-	public Double getOperatingCurrent() {
-		return operatingCurrent;
-	}
-
-	public void setOperatingCurrent(Double operatingCurrent) {
-		this.operatingCurrent = operatingCurrent;
-	}
-
-	public Double getPowerFactor() {
-		return powerFactor;
-	}
-
-	public void setPowerFactor(Double powerFactor) {
-		this.powerFactor = powerFactor;
-	}
-
-	public Double getElectrode01() {
-		return electrode01;
-	}
-
-	public void setElectrode01(Double electrode01) {
-		this.electrode01 = electrode01;
-	}
-
-	public Double getElectrode02() {
-		return electrode02;
-	}
-
-	public void setElectrode02(Double electrode02) {
-		this.electrode02 = electrode02;
-	}
-
-	public Double getElectrode03() {
-		return electrode03;
-	}
-
-	public void setElectrode03(Double electrode03) {
-		this.electrode03 = electrode03;
-	}
-
-	public Double getArgonCunsumption() {
-		return argonCunsumption;
-	}
-
-	public void setArgonCunsumption(Double argonCunsumption) {
-		this.argonCunsumption = argonCunsumption;
-	}
-
-	public Double getPowerTimevar() {
-		return powerTimevar;
-	}
-
-	public void setPowerTimevar(Double powerTimevar) {
-		this.powerTimevar = powerTimevar;
-	}
 	
+	@Column(name="Argon_Flow_rate")
+	private Double argonFlowRate;
+	
+	@Column(name="Active_Energy ")
+	private Double activeEnergy ;
 	
 
 }

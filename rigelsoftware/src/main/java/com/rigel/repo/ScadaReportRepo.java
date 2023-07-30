@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ScadaReportRepo extends JpaRepository<ScadaReport, String> {
 
-	@Query(value = "select * from kisco_lrf_report where dated BETWEEN :startDate and :endDate order by dated desc", nativeQuery = true)
+	@Query(value = "select * from kisco_lrf_report where dated BETWEEN :startDate and :endDate order by dated asc", nativeQuery = true)
 	public List<ScadaReport> fetchAllRecords(Date startDate, Date endDate);
 
 }

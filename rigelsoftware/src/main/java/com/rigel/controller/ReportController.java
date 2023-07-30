@@ -20,6 +20,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rigel.security.JwtTokenUtil;
@@ -31,13 +32,13 @@ public class ReportController {
 	@Autowired
 	com.rigel.service.DownloadFile downloadFile;
 	
-//    @Autowired
-//	private UserDetailsService userDetailsService;
-//	
-//	@Autowired
-//	private JwtTokenUtil jwtTokenUtil;
-//
-//	
+    @Autowired
+	private UserDetailsService userDetailsService;
+	
+	@Autowired
+	private JwtTokenUtil jwtTokenUtil;
+
+	
 //	@RequestMapping(value="token",method=RequestMethod.POST)
 //	public ResponseEntity<Map<String,Object>> generateToken() {
 //		Map<String,Object> response=new HashMap<>();
@@ -48,8 +49,8 @@ public class ReportController {
 //	}
 	
 	@RequestMapping(value="genarateReport",method=RequestMethod.GET)
-	public void genarateReport(HttpServletResponse response) {
-		downloadFile.diownload();
+	public void genarateReport(HttpServletResponse response,@RequestParam("interval") String interval,@RequestParam("downloadType") String downloadType) {
+		downloadFile.download(Integer.parseInt(interval),downloadType);
 	}
 
 }

@@ -15,12 +15,12 @@ public class DownloadFile {
 	@Autowired
 	com.rigel.service.PlcReportService plcReportService;
 
-	public void diownload() {
+	public void download(int reportIntervel,String downloadType) {
 		try {
 
-			int reportIntervel = 1;
+//			int reportIntervel = 80;
 			Date endDtae = new Date();
-			plcReportService.downloadReport(endDtae, reportIntervel);
+			plcReportService.downloadReport(endDtae, reportIntervel,downloadType);
 //			Date endDate = new Date();
 //			String folderName = dateformatter.format(endDate);
 //			String fileName = fileNameformatter.format(endDate).replace("\\s+", "_");

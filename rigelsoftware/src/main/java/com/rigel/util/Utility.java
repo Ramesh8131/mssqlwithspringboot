@@ -11,9 +11,9 @@ public class Utility {
 	
 	 private static final String USER_AGENT = "Mozilla/5.0";
 
-	 public static void sendHttpGETRequest() throws IOException {
-		    String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNAeW9wbWFpbC5jb20iLCJleHAiOjE2ODk2MjA3NTUsImlhdCI6MTY4ODIzODM1NX0.RbMimfDRxQetkuUTBDEEMz-9FeakAhtJ-zL_EfQ_5eUnd0PMqKgo60PKC1zi78ES5wI3vXE1vOLgf3AMnYj2fQ";
-	        URL obj = new URL("http://localhost:4444/api/genarateReport");
+	 public static void sendHttpGETRequest(int interval,String downloadType) throws IOException {
+		    String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNAeW9wbWFpbC5jb20iLCJleHAiOjE2OTA3NDI5MTMsImlhdCI6MTY4OTM2MDUxM30.hozH8kFkUIq9u_UNgew7Q5KIaNhzJVixJA6qOccsa-yfFGMl9SsGZEnJXWnM3pvQ8IITCSWXzG7Ov8bT0uC3vQ";
+	        URL obj = new URL("http://localhost:4444/api/genarateReport?interval="+interval+"&downloadType="+downloadType);
 	        HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
 	        httpURLConnection.setRequestMethod("GET");
 	        httpURLConnection.setRequestProperty("User-Agent", USER_AGENT);
