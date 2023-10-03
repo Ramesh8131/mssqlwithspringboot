@@ -30,3 +30,15 @@ https://plc4x.apache.org/users/protocols/modbus.html
 			<version>0.10.0</version>
 			<scope>runtime</scope>
 		</dependency>
+
+
+
+
+
+
+
+
+
+
+  Graph:----------------------
+  https://zetcode.com/java/jfreechart/
